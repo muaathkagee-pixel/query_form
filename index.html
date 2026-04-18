@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Query Form</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width:50%;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align:center;
+    color:#003366;
+}
+
+label{
+    font-weight:bold;
+    display:block;
+    margin-top:15px;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+textarea{
+    resize:vertical;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    background:#003366;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0055aa;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Employee ERP Support Query Form</h2>
+
+    <form action="#" method="post">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="department">Department</label>
+        <input type="text" id="department" name="department" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject of Enquiry</label>
+        <select id="subject" name="subject" required>
+            <option value="">Select Subject</option>
+            <option>Difficulty Using New ERP System</option>
+            <option>Slow Task Completion After Go-Live</option>
+            <option>Dual Data Entry Concern</option>
+            <option>New Navigation / Lost Shortcuts</option>
+            <option>Changed Approval Workflow</option>
+            <option>Report Missing or Different Format</option>
+            <option>System Downtime / Access Issue</option>
+            <option>Data Migration Error</option>
+            <option>Training Request for ERP</option>
+            <option>Resistance to Change Support</option>
+            <option>Help Desk Delay</option>
+            <option>General ERP Enquiry</option>
+            <option>Other</option>
+        </select>
+
+        <label for="message">Describe Your Query</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit Query</button>
+
+    </form>
+</div>
+
+</body>
+</html>
