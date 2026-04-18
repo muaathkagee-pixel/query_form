@@ -105,6 +105,30 @@ button:hover{
 
     </form>
 </div>
+<script>
+document.getElementById("queryForm").addEventListener("submit", function(e){
+    e.preventDefault();
 
+    let name = document.getElementById("name").value;
+    let department = document.getElementById("department").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    if(!name || !email || !subject || !message){
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    alert("Thank you! Your query has been submitted.");
+
+    let mailtoLink = `mailto:support@yourcompany.com?subject=${subject}&body=Name: ${name}%0D%0ADepartment: ${department}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+
+    window.location.href = mailtoLink;
+
+    document.getElementById("queryForm").reset();
+});
+</script>
+    
 </body>
 </html>
